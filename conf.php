@@ -1,0 +1,16 @@
+<?php
+// Site information
+$conf['site_name'] = "Benjamins and Benjamin Website";
+$conf['site_url'] = "http://localhost";
+$conf['admin_email'] = "admin@benjaminswebsite.com";
+
+
+//Database configuration
+$conf['db_type'] = "pdo";
+$conf['db_host'] = "localhost";
+$conf['db_user'] = "root";
+$conf['db_pass'] = "";
+$conf['db_name'] = "I_O_P";
+
+//Site language
+$conf['site_lang'] = "en";

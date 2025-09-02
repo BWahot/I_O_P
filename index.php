@@ -1,3 +1,13 @@
 <?php
-print "<H1>Hello, World!</H1>";
-print "<p>Today is " .date("l")."</p>";
+// Include the classes.php file
+require_once 'ClassAutoLoad.php';
+
+
+$layout->header($conf);
+
+//call the todayDate method
+print $greeting->todayDate();
+
+$form->signup();
+
+$layout->footer($conf);
