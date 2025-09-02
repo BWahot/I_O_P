@@ -4,5 +4,5 @@ require_once 'ClassAutoLoad.php';
 $layout->header($conf);
 //call the todayDate method
 print $greeting->todayDate();
-$form->signup();
+$form->login();
 $layout->footer($conf);

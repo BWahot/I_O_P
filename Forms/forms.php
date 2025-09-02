@@ -12,8 +12,21 @@ class forms {
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             <br><br>
-            <input type="submit" value="Sign Up">
+            <input type="submit" value="Sign Up"> <a href="signin.php">Already have an account? Sign In</a>
         </form>
 <?php
+    }
+    public function login() {
+        ?>
+        <form method="post" action="">
+            <label for="username">Name:</label>
+            <input type="text" id="username" name="username" required>
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br><br>
+            <input type="submit" value="Log In"> <a href="./">Don't have an account? Sign Up</a>
+        </form>
+        <?php
     }
 }
