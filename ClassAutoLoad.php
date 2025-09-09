@@ -1,12 +1,13 @@
 <?php 
 
+require 'Pluggins/PHPMailer/vendor/autoload.php';
 require_once 'conf.php';
 
 $directories = ["Global", "Forms", "Layouts"];
 
 spl_autoload_register(function ($class_name) use ($directories) {
     foreach ($directories as $directory) {
-        $file = __DIR__ . "/$directory/$class_name.php";
+        $file = __DIR__ . "/$directory/".$class_name.".php";
         if (file_exists($file)) {
             require_once $file;
             return;
@@ -15,6 +16,6 @@ spl_autoload_register(function ($class_name) use ($directories) {
 });
 
 //create an instance of the Greeting class
-$greeting = new classes();
+$ObjSendMail = new SendMail();
 $form = new forms();
 $layout = new layouts();

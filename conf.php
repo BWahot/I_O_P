@@ -14,3 +14,11 @@ $conf['db_name'] = "I_O_P";
 
 //Site language
 $conf['site_lang'] = "en";
+
+//Email Configuration
+$conf['mail_type'] = "smtp";
+$conf['smtp_host'] = "smtp.gmail.com";
+$conf['smtp_user'] = "benjaminwahothi04@gmail.com";
+$conf['smtp_pass'] = "rngv acla xvfp bvnx";
+$conf['smtp_port'] = 587;
+$conf['smtp_secure'] = "tls";
