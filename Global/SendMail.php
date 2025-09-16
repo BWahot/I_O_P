@@ -19,10 +19,6 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = $conf['smtp_port'];  
 
-    $useremail =  $_SESSION['user_email'] ?? '';
-    // Use the code from session (set in signup.php)
-    $verificationcode = $_SESSION['verification_code'] ?? 'N/A'; 
-
     //recipient
     $mail->setFrom($mailCnt['email_from'], $mailCnt['name_from']);
     $mail->addAddress($mailCnt['email_to'], $mailCnt['name_to']);     // Add a recipient
@@ -32,7 +28,7 @@ try {
     $mail->Subject = $mailCnt['subject'];
     $mail->Body    = $mailCnt['body'];
 
-        $mail->send();
+    $mail->send();
         echo 'Message has been sent';
     } catch (Exception $e) {        
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
