@@ -6,6 +6,8 @@ use PHPMailer\PHPMailer\Exception;
 class SendMail {
     public function Send_Mail($conf, $mailCnt) {
 
+require 'Pluggins/PHPMailer/vendor/autoload.php';
+
 $mail = new PHPMailer(true);
 
 try {

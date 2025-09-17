@@ -1,7 +1,7 @@
 <?php
 // Site information
-$conf['site_name'] = "Benjamins and Benjamin Website";
-$conf['site_url'] = "http://localhost";
+$conf['site_name'] = "ICS Community";
+$conf['site_url'] = "http://localhost/I_O_P";
 $conf['admin_email'] = "admin@benjaminswebsite.com";
 
 
@@ -18,7 +18,7 @@ $conf['site_lang'] = "en";
 //Email Configuration
 $conf['mail_type'] = "smtp";
 $conf['smtp_host'] = "smtp.gmail.com";
-$conf['smtp_user'] = "benjaminwahothi04@gmail.com";
+$conf['smtp_user'] = "example@gmail.com";
 $conf['smtp_pass'] = "secret password";
 $conf['smtp_port'] = 587;
 $conf['smtp_secure'] = "tls";
