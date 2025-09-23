@@ -1,9 +1,8 @@
 <?php 
 
-
 require_once 'conf.php';
 
-$directories = ["Global", "Forms", "Layouts"];
+$directories = ["Global", "Forms", "Layouts", "Projects", "fxns"];
 
 spl_autoload_register(function ($class_name) use ($directories) {
     foreach ($directories as $directory) {
@@ -19,3 +18,8 @@ spl_autoload_register(function ($class_name) use ($directories) {
 $ObjSendMail = new SendMail();
 $ObjForm = new forms();
 $ObjLayout = new layouts();
+
+$ObjAuthentication = new Authentication($conf);
+$ObjFxns = new fxns();
+
+$ObjAuthentication->signup($conf, $ObjFxns);

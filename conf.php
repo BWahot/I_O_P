@@ -1,4 +1,13 @@
 <?php
+
+//start session
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+//set timezone
+date_default_timezone_set('Africa/Nairobi');
+
 // Site information
 $conf['site_name'] = "ICS Community";
 $conf['site_url'] = "http://localhost/I_O_P";
@@ -22,3 +31,9 @@ $conf['smtp_user'] = "example@gmail.com";
 $conf['smtp_pass'] = "secret password";
 $conf['smtp_port'] = 587;
 $conf['smtp_secure'] = "tls";
+
+//password length
+$conf['password_min_length'] = 6;
+
+//email domain validation
+$conf['allowed_email_domains'] = ["gmail.com", "yahoo.com", "outlook.com","strathmore.edu"];
